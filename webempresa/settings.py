@@ -38,10 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'ckeditor',
+
     'core',
     'blog',
     'services.apps.ServicesConfig',
-    'social.apps.SocialConfig'
+    'social.apps.SocialConfig',
+    'pages.apps.PagesConfig',
+    'contact'
 ]
 
 MIDDLEWARE = [
@@ -129,3 +133,21 @@ STATIC_URL = '/static/'
 # Media config
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+#ckeditor
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink']
+        ]
+    }
+}
+
+#email config
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '5ffad7bfe11672'
+EMAIL_HOST_PASSWORD = 'd84b486f43439b'
+EMAIL_PORT = '2525'

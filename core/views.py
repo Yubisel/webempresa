@@ -9,6 +9,3 @@ def history(request):
 
 def visit_us(request):
     return render(request, "core/visit_us.html")
-
-def contact(request):
-    return render(request, "core/contact.html")
